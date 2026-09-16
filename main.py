@@ -1,31 +1,28 @@
-from pyscript import display, document
+from pyscript import document, display
 
+def orderaccept(e):
+    ish = document.getElementById("amer")
+    hea = document.getElementById("spain")
+    sin = document.getElementById("cold")
+    don = document.getElementById("cappu")
+    meu = document.getElementById("caramel")
 
-
-def orderaccept(e)
-ish = document.getElementById("amer").innerHTML
-hea = document.getElementById("spain").innerHTML
-sin = document.getElementById("cold").innerHTML
-don = document.getElementById("cappu").innerHTML
-meu = document.getElementById("caramel").innerHTML
-
-subtotal = (
+    subtotal = (
     (float(ish.value) if ish.checked else 0.0)
-    +
-    (float(hea.value) if ish.checked else 0.0)
-    +
-    (float(sin.value) if ish.checked else 0.0)
-    +
-    (float(don.value) if ish.checked else 0.0)
-    +
-    (float(meu.value) if ish.checked else 0.0)
+    +(float(hea.value) if hea.checked else 0.0)
+    +(float(sin.value) if sin.checked else 0.0)
+    +(float(don.value) if don.checked else 0.0)
+    +(float(meu.value) if meu.checked else 0.0)
     
-)
+    )
 
-vat = subtotal * 0.12
+    vat = subtotal * 0.12
 
-total = subtotal + vat
+    output = f"""
+    ====Receipt====<br>
+    Subtotal: ₱{subtotal}<br>
+    VAT: ₱{vat}<br>
+    Total: ₱{subtotal + vat}<br>
+    """
 
-display(f"Subtotal: {subtotal}", target="subtote").innerHTML
-display(f"VAT: {vat}", target="tax").innerHTML
-display(f"Total: {total}", target="tote").innerHTML
+    document.getElementById("textoutput").innerHTML = output
