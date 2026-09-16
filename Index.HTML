@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills Test Q1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     
@@ -12,37 +11,43 @@
 
 <form action="">
 
-    <div class="container">
-
-    <h3>Menu</h3>
-    <input type="checkbox" id="amer" value="90">
+    <h3>Menu:</h3>
+    <input type="checkbox" id="amer" value="₱50">
     <label for="amer" id="labelamer">Americano</label>
 
     <br>
 
-    <input type="checkbox" id="spain" value="75">
+    <input type="checkbox" id="spain" value="₱100">
     <label for="spain" id="labelspain">Spanish Latte</label>
 
     <br>
 
-    <input type="checkbox" id="cold" value="40">
+    <input type="checkbox" id="cold" value="₱280">
     <label for="cold" id="labelcold">Cold Brew Malt</label>
 
     <br>
 
-    <input type="checkbox" id="cappu" value="110">
+    <input type="checkbox" id="cappu" value="₱70">
     <label for="cappu" id="labelcappu">Cappuccino</label>
 
     <br>
 
-    <input type="checkbox" id="caramel" value="55">
+    <input type="checkbox" id="caramel" value="₱90">
     <label for="caramel" id="labelcaramel">Caramel Macchiato</label>
 
     <br>
 
-    <button></button>
+    <button type="button" py-click="orderaccept">Create order</button>
+
     </div>
 </form>
 
+<br>
+
+<h3>====Receipt====</h3>
+
+<h4 id="subtote"></h4>
+<h4 id="tax"></h4>
+<h4 id="tote"></h4>
 </body>
 </html>
